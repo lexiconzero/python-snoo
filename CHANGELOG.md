@@ -1,6 +1,18 @@
 # CHANGELOG
 
 
+## v0.10.0 (2025-10-26)
+
+### Features
+
+- Add get_babies function ([#45](https://github.com/Lash-L/python-snoo/pull/45),
+  [`f96667f`](https://github.com/Lash-L/python-snoo/commit/f96667f84f65a413a8e66ba7bd1d37cf1ff19f4c))
+
+* Added get_babies function
+
+* Fixed linting
+
+
 ## v0.9.0 (2025-08-18)
 
 ### Features
