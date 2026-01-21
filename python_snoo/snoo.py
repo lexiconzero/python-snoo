@@ -19,6 +19,7 @@ from .containers import (
     SnooData,
     SnooDevice,
     SnooStates,
+    SnooNoiseTimeoutLevels
 )
 from .exceptions import InvalidSnooAuth, SnooAuthException, SnooBabyError, SnooCommandException, SnooDeviceError
 from .pubnub_async import SnooPubNub
@@ -233,11 +234,11 @@ class Snoo:
 
         await self.send_command("go_to_state", device, **{"state": level.value, "hold": hold})
 
-    async def set_sticky_white_noise(self, device: SnooDevice, on: bool):
+    async def set_sticky_white_noise(self, device: SnooDevice, on: bool, timeout_value: SnooNoiseTimeoutLevels = SnooNoiseTimeoutLevels._15_minutes):
         await self.send_command(
             "set_sticky_white_noise",
             device,
-            **{"state": "on" if on else "off", "timeout_min": 15},
+            **{"state": "on" if on else "off", "timeout_min": timeout_value},
         )
 
     async def get_status(self, device: SnooDevice):
