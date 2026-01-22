@@ -229,7 +229,7 @@ class Snoo:
 
     async def set_sticky_white_noise(
         self, device: SnooDevice, on: bool, timeout_value: SnooNoiseTimeoutLevels = SnooNoiseTimeoutLevels._15_minutes
-        ):
+    ):
         """Enable or disable sticky white noise for a device.
 
         Args:
