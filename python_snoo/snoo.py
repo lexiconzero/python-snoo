@@ -13,7 +13,7 @@ from pubnub.enums import PNReconnectionPolicy
 from pubnub.pnconfiguration import PNConfiguration
 from pubnub.pubnub_asyncio import PubNubAsyncio
 
-from .containers import AuthorizationInfo, BabyData, SnooData, SnooDevice, SnooStates, SnooNoiseTimeoutLevels
+from .containers import AuthorizationInfo, BabyData, SnooData, SnooDevice, SnooNoiseTimeoutLevels, SnooStates
 from .exceptions import InvalidSnooAuth, SnooAuthException, SnooBabyError, SnooCommandException, SnooDeviceError
 from .pubnub_async import SnooPubNub
 
