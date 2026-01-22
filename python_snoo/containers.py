@@ -1,6 +1,6 @@
 import dataclasses
 import datetime
-from enum import StrEnum, IntEnum
+from enum import IntEnum, StrEnum
 from typing import Any, Union
 
 from mashumaro.mixins.json import DataClassJSONMixin
@@ -14,6 +14,7 @@ class SnooLevels(StrEnum):
     level3 = "LEVEL3"
     level4 = "LEVEL4"
     stop = "ONLINE"
+
 
 class SnooNoiseTimeoutLevels(IntEnum):
     _5_minutes = 5

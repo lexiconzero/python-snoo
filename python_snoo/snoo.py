@@ -13,14 +13,7 @@ from pubnub.enums import PNReconnectionPolicy
 from pubnub.pnconfiguration import PNConfiguration
 from pubnub.pubnub_asyncio import PubNubAsyncio
 
-from .containers import (
-    AuthorizationInfo,
-    BabyData,
-    SnooData,
-    SnooDevice,
-    SnooStates,
-    SnooNoiseTimeoutLevels
-)
+from .containers import AuthorizationInfo, BabyData, SnooData, SnooDevice, SnooStates, SnooNoiseTimeoutLevels
 from .exceptions import InvalidSnooAuth, SnooAuthException, SnooBabyError, SnooCommandException, SnooDeviceError
 from .pubnub_async import SnooPubNub
 
@@ -234,7 +227,9 @@ class Snoo:
 
         await self.send_command("go_to_state", device, **{"state": level.value, "hold": hold})
 
-    async def set_sticky_white_noise(self, device: SnooDevice, on: bool, timeout_value: SnooNoiseTimeoutLevels = SnooNoiseTimeoutLevels._15_minutes):
+    async def set_sticky_white_noise(
+        self, device: SnooDevice, on: bool, timeout_value: SnooNoiseTimeoutLevels = SnooNoiseTimeoutLevels._15_minutes
+        ):
         """Enable or disable sticky white noise for a device.
 
         Args:
