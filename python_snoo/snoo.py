@@ -228,9 +228,9 @@ class Snoo:
         await self.send_command("go_to_state", device, **{"state": level.value, "hold": hold})
 
     async def set_sticky_white_noise(
-        self, 
-        device: SnooDevice, 
-        on: bool, 
+        self,
+        device: SnooDevice,
+        on: bool,
         timeout_value: SnooNoiseTimeoutLevels | int = SnooNoiseTimeoutLevels._15_minutes,
     ):
         """Enable or disable sticky white noise for a device.
