@@ -231,7 +231,7 @@ class Snoo:
         self, 
         device: SnooDevice, 
         on: bool, 
-        timeout_value: SnooNoiseTimeoutLevels | int = SnooNoiseTimeoutLevels._15_minutes
+        timeout_value: SnooNoiseTimeoutLevels | int = SnooNoiseTimeoutLevels._15_minutes,
     ):
         """Enable or disable sticky white noise for a device.
 
